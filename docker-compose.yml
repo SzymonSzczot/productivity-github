@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  github-prod-app:
+    image: github-productive:latest
+    container_name: github-prod
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/code/app
+volumes:
+  github-prod-app:
+    driver: local
